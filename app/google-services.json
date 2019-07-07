@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "546930731822",
+    "firebase_url": "https://ecommerce-test-5927b.firebaseio.com",
+    "project_id": "ecommerce-test-5927b",
+    "storage_bucket": "ecommerce-test-5927b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:546930731822:android:947c0d70d3b9b3f8",
+        "android_client_info": {
+          "package_name": "id.surya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "546930731822-i509p28bsdbko4j6mevsaqu6j2imt104.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCswlJZ6Yq2ZB4cE_Mnxz6TzSeeUmA6owc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "546930731822-i509p28bsdbko4j6mevsaqu6j2imt104.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+                name="love"
+                type="Boolean"/>
+        <variable
+                name="productPromo"
+                type="id.surya.l_extras.data.model.ProductPromo"/>
+
+        <variable
+                name="masterItemCallback" type="id.surya.home.master.MasterItemCallback"/>
+    </data>
+
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/dimens_8dp"
+            app:cardCornerRadius="0dp">
+
+        <LinearLayout
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                android:layout_width="match_parent"
+                android:onClick="@{() -> masterItemCallback.onItemProductSelected(productPromo)}"
+                android:layout_height="wrap_content"
+                android:minHeight="172dp"
+                android:orientation="vertical">
+
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:adjustViewBounds="true"
+                        app:imageUrl="@{productPromo.imageUrl}"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerCrop"/>
+                <ImageView
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="5dp"
+                        android:layout_gravity="start|bottom"
+                        android:src="@drawable/ic_favorite_black_24dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+            </FrameLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dimens_16dp">
+
+                <LinearLayout
+                        android:gravity="right"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/fs_joey"
+                                android:text="@string/product_title"
+                                android:textSize="@dimen/size_14sp"/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/fs_joey_bold"
+                                android:maxLines="1"
+                                android:text="@{productPromo.title}"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/size_20sp"
+                                tools:text="@string/app_name"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                            android:gravity="end"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        <TextView
+                                android:gravity="end"
+                                android:textAlignment="gravity"
+                                android:textColor="@android:color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimens_16dp"
+                                android:fontFamily="@font/fs_joey"
+                                android:text="@string/price"
+                                android:textSize="@dimen/size_14sp"/>
+
+                        <TextView
+                                android:gravity="end"
+                                android:textAlignment="gravity"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/fs_joey"
+                                android:text="@{productPromo.price}"
+                                android:textSize="@dimen/size_16sp"
+                                tools:text="7.0/10"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:textColor="@android:color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimens_16dp"
+                            android:fontFamily="@font/fs_joey"
+                            android:text="@string/description"
+                            android:textSize="@dimen/size_14sp"/>
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/fs_joey"
+                            android:maxLines="2"
+                            android:text="@{productPromo.description}"
+                            android:textSize="@dimen/size_16sp"
+                            tools:text="this is the description"/>
+
+                </LinearLayout>
+                <ImageView
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</layout>
